@@ -1,35 +1,53 @@
 
 
+/* Top Level */
+
+
+
 /* Set nav bar background, borders, and align text*/
 
 nav    {
 
    background-color: yellowGreen;
+
    border-top: 3px solid black;
-   border-bottom: 3px solid black;
+
+       border-bottom: 3px solid black;
+
    text-align:center;
+
 }
+
+
 
 /* Remove margins and padding */
 
 nav, #main ul {
 
    margin: 0;
+
    padding: 0;
+
 }
+
+
 
 /* Eliminate bullets */
 
-nav ul {
-   list-style-type: none;
+nav {
+
+   list-style: none;
 
 }
+
+
 
 /* Set display */
 
 nav li{
 
    display:inline-block;
+
 }
 
 
@@ -37,56 +55,97 @@ nav li{
 /* Add padding, Style fonts */
 
 nav a {
+
    padding: 10px;
+
    font-size: 110%;
+
    font-weight: bold;
+
    color: black;
+
    text-decoration:none;
 
 }
 
-/* Pseudo class states */
+
+
+/* Psuedo class states */
 
 #main li:hover a{
 
    color: blue;
+
    background-color: ghostWhite;
-} 
+
+}
+
+
 
 /* Drop Down */
 
 nav li{
-	position: relative;
+
+   position:relative;
+
 }
 
-li > ul {
-	position: absolute;
-	left: -9999px;
-	text-align: left;
-	background-color: yellowGreen;
+li > ul{
+
+   position:absolute;
+
+   left:-9999px;
+
+   text-align:left;
+
+   background-color: yellowGreen;
+
 }
 
-li ul > li {
-	padding-top: 10px;
-	display: inline-block;
-}
+li ul > li{
 
-#main li: hover ul{
-	left: 0;
-}
+   padding-top: 10px;
 
-#main li: hover ul a {
-	text-decoration: none;
-	color: white;
-	background: magenta;
-}
+   display:inline-block;
 
-#main li: hover ul a:hover{
-	color: red;
-	background: aqua;
-}
+   }
+
+
 
 #main ul a{
-	white-space: nowrap;
-	display: block;
+
+   white-space:nowrap;
+
+   display:block;
+
+}
+
+
+
+#main li:hover ul{
+
+   left:0;
+
+}
+
+
+
+#main li:hover ul a{
+
+   text-decoration:none;
+
+   color: white;
+
+   background:magenta;
+
+
+
+}
+
+#main li:hover ul a:hover{
+
+   color: red;
+
+   background:aqua;
+
 }
