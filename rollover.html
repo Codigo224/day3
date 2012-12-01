@@ -31,7 +31,27 @@
 	}
 </style>
 
+<script>
+// create function to get left image on mouseover
+function doMouseover() {
+	var img = document.getElementById('image2');
+	img.src = "images/evilHomer_L.gif";
+	img.width = 127;
+	img.height = 212;
+}
+// create function to get right image on mouseover
+function doMouseOut() {
+	var img = document.getElementById('image2');
+	img.src = "images/evilHomer_R.gif";
+	img.width = 127;
+	img.height = 212;
+}
+
+</script>
+
 </head>
+
+<br />
 
 <body>
 
@@ -59,11 +79,9 @@
 
 <ul>
 
-<li><a href="two_column_left.html">2 Column Float Left</a></li>
-
-<li><a href="two_column_right.html">2 Column Float Right</a></li>
-
-<li><a href="three_column.html">3 Column Float</a></li>
+	<li><a href="two_column_left.html">2 Column Float Left</a></li>
+	<li><a href="two_column_right.html">2 Column Float Right</a></li>
+	<li><a href="three_column.html">3 Column Float</a></li>
 
 </ul>
 
@@ -141,8 +159,6 @@
 
 </header>
 
-
-
 <section id="container">
 
 <header id="top">
@@ -153,6 +169,8 @@
 
 <!-- Content Starts Here -->
 
+
+
 <!-- CSS Version -->
 <div id="one">
 	<h2>Homer Dancing at Last Year's Party using CSS</h2>
@@ -162,17 +180,24 @@
 
 <!-- JavaScript Version -->
 
+
+
+<div id="two">
+<h2>Homer Dancing at Last Year's Party using JavaScript</h2>
+
+<img src="images/evilHomer_L.gif" id="image2" width="127" height="212" alt="Dancing Homer2"
+onmouseover="doMouseOver();"
+onmouseout="doMouseout();" />
+</div>
+
+
 <!-- JQuery Version -->
 
 <!-- Content Ends Here -->
 
-
-
-<!-- Content Ends Here-->
-
 </section>
 
-
+</body>
 
 <footer>
 

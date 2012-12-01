@@ -8,7 +8,7 @@
 		<link rel="shortcut icon" href="images/homer.ico" />
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/nav.css" />
-		<script src="js/calculator.js"></script>
+		<script src="js/calculatorV2.js"></script>
 	</head>
 
 <style>
@@ -16,9 +16,7 @@
 form {
 
 width: 450px;
-
 margin: 0 auto;
-
 padding: 15px;
 
 }
@@ -26,9 +24,7 @@ padding: 15px;
 label {
 
 width: 10em;
-
 padding-right: 1em;
-
 float: left;
 
 }
@@ -36,9 +32,7 @@ float: left;
 #data input {
 
 float: left;
-
 width: 15em;
-
 margin-bottom: .5em;
 
 }
@@ -46,7 +40,6 @@ margin-bottom: .5em;
 #buttons input {
 
 float: left;
-
 margin-bottom: .5em;
 
 }
@@ -65,7 +58,7 @@ text-align: center;
 
 
 
-/* Presenation */
+/* Presentation */
 
 
 
@@ -105,9 +98,7 @@ color: navy;
 <ul>
 
 <li><a href="two_column_left.html">2 Column Float Left</a></li>
-
 <li><a href="two_column_right.html">2 Column Float Right</a></li>
-
 <li><a href="three_column.html">3 Column Float</a></li>
 
 </ul>
@@ -115,23 +106,15 @@ color: navy;
 </li>
 
 <li><a href="table.html">Tables</a>
-
-<ul>
-
-<li><a href="dynamic_table.html">Dynamic</a></li>
-
-<li><a href="web_sql.html">Database</a></li>
-
-</ul>
-
+	<ul>
+		<li><a href="dynamic_table.html">Dynamic</a></li>
+		<li><a href="web_sql.html">Database</a></li>
+	</ul>
 </li>
-
 <li><a href="slideshow.html">Slide Show</a>
 
 <ul>
-
-<li><a href="accordion.html">Accordion</a></li>
-
+	<li><a href="accordion.html">Accordion</a></li>
 </ul>
 
 </li>
@@ -198,10 +181,16 @@ color: navy;
 <input type="text" id="product_description"/><br />
 
 <label>List Price:</label>
-<input type="text" id="list_price" /><br />
+<input type="number" id="list_price" /><br />
+
+<label>Customer Type:</label>
+<select name="type" id="type">
+	<option value="R">Retail</option>
+	<option value="C">Commercial</option>
+</select><br />
 
 <label>Discount Percent:</label>
-<input type="text" id="discount_percent" />%<br />
+<input type="number" id="discount_percent" disabled/>%<br />
 
 </div>
 
@@ -210,8 +199,7 @@ color: navy;
 <div id="buttons">
 
 <label>&nbsp;</label>
-
-<input type="button" value="Calculate Discount" /><br />
+<input type="button" value="Calculate Discount" onclick="calculate();" /><br />
 
 </div>
 <!-- output for JavaScript -->
@@ -224,7 +212,10 @@ color: navy;
 	<output id="discount_price" for="list_price discount">
 	</output><br />
 </div>
-
+<!--  today's date -->
+<br />
+<script>getToday (); </script>
+<noscript>You must enable JavaScript for this application.</noscript>
 </form>
 
 <!-- Content Ends Here -->
